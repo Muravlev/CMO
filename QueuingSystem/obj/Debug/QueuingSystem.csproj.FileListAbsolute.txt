@@ -1,0 +1,37 @@
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe.config
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.pdb
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csprojResolveAssemblyReference.cache
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Form1.resources
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Properties.Resources.resources
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csproj.GenerateResource.Cache
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.exe
+c:\users\анастасия\documents\visual studio 2015\Projects\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.pdb
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe.config
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.exe
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.pdb
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.pdb
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csprojResolveAssemblyReference.cache
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Form1.resources
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Properties.Resources.resources
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csproj.GenerateResource.Cache
+C:\Users\ayham\Desktop\QueuingSystem\QueuingSystem\bin\Debug\ZedGraph.dll
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe.config
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.pdb
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csprojResolveAssemblyReference.cache
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Form1.resources
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Properties.Resources.resources
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csproj.GenerateResource.Cache
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.exe
+F:\Dropbox\3 курс\Моделирование систем\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.pdb
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe.config
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.exe
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\bin\Debug\QueuingSystem.pdb
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csprojResolveAssemblyReference.cache
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Form1.resources
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.Properties.Resources.resources
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.csproj.GenerateResource.Cache
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.exe
+F:\Dropbox\3 курс\Моделирование систем\СМО\QueuingSystem\QueuingSystem\QueuingSystem\obj\Debug\QueuingSystem.pdb
