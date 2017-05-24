@@ -48,7 +48,7 @@ namespace QueuingSystem {
         }
         
 
-        private static double poissonTheory(double ro, int m) {
+        private static double theory(double ro, int m) {
             if(ro > 0.99 && ro < 1.01) {
                 ro = 1.01;
             }
@@ -127,15 +127,16 @@ namespace QueuingSystem {
         }
 
         private void start_btn_Click(object sender, EventArgs e) {
+
             chart1.Series[0].Points.Clear();
             chart1.Series[1].Points.Clear();
             chart1.Series[2].Points.Clear();
             
-            int m = Convert.ToInt32(mTextBox.Text); // Кол-во мест в очереди
-            int ro_max = Convert.ToInt32(roTextBox.Text); // Нагрузка на систему
+            int m = Convert.ToInt32(mTextBox.Text); // Количество мест в очереди
+            int ro_max = Convert.ToInt32(roTextBox.Text); // Максимальная нагрузка
             int mu = Convert.ToInt32(muTextBox.Text); // Интенсивность потока обслуживания
             int n = Convert.ToInt32(nTextBox.Text); // Кол-во заявок
-            int period = n / Convert.ToInt32(periodTextBox.Text); // Периодичность проверки
+            int period = n / Convert.ToInt32(periodTextBox.Text); // Периодичность
             double step = Convert.ToDouble(stepTextBox.Text); // Шаг по lambda (ro)
 
             int lambda = ro_max; // Входящий поток заявок на обслуживание
@@ -144,9 +145,10 @@ namespace QueuingSystem {
             for(double ro = 0; ro <= ro_max; ro += step) {
                 // Теория
                 
-                chart1.Series[0].Points.AddXY(ro, poissonTheory(ro, m));
+                chart1.Series[0].Points.AddXY(ro, theory(ro, m));
 
                 // Эксперимент
+
                 if (radioButton1.Checked) {
                     n_array = poissonExperiment(ro, mu, m, 1, 1, n, period);
                 } else if(radioButton2.Checked) {
