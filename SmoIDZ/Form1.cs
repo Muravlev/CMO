@@ -13,38 +13,39 @@ namespace QueuingSystem {
         public Form1() {
             InitializeComponent();
         }
-
+        public int RadioButton = 1;
         static Random rnd = new Random();
-        private void radioChanged()
+        private void radioChanged(int i)
         {
             if (radioButton1.Checked)
             {
-                R1TextBox.Visible = false;
-                R2TextBox.Visible = false;
-                label7.Visible = false;
-                label8.Visible = false;
+                R1TextBox.Enabled = false;
+                R2TextBox.Enabled = false;
+                label7.Enabled = false;
+                label8.Enabled = false;
             }
             else if (radioButton2.Checked)
             {
-                R1TextBox.Visible = true;
-                R2TextBox.Visible = false;
-                label7.Visible = true;
-                label8.Visible = false;
+                R1TextBox.Enabled = true;
+                R2TextBox.Enabled = false;
+                label7.Enabled = true;
+                label8.Enabled = false;
             }
             else if (radioButton3.Checked)
             {
-                R1TextBox.Visible = false;
-                R2TextBox.Visible = true;
-                label7.Visible = false;
-                label8.Visible = true;
+                R1TextBox.Enabled = false;
+                R2TextBox.Enabled = true;
+                label7.Enabled = false;
+                label8.Enabled = true;
             }
             else if (radioButton4.Checked)
             {
-                R1TextBox.Visible = true;
-                R2TextBox.Visible = true;
-                label7.Visible = true;
-                label8.Visible = true;
+                R1TextBox.Enabled = true;
+                R2TextBox.Enabled = true;
+                label7.Enabled = true;
+                label8.Enabled = true;
             }
+            RadioButton = i;
         }
         
 
@@ -56,14 +57,14 @@ namespace QueuingSystem {
             double n_service;
             if(m == 0) {
                 m = 1;
-                n_service = (ro - Math.Pow(ro, m + 1)) / (1 - Math.Pow(ro, m + 1));
+                n_service = (ro - Math.Pow(ro, m+1)) / (1 - Math.Pow(ro, m+1));
             } else {
                 n_service = (ro - Math.Pow(ro, m + 1)) / (1 - Math.Pow(ro, m + 1));
             }
             return n_queue + n_service;
         }
 
-        private static double[] poissonExperiment(double lambda, int mu, int m, int R1, int R2, int n, int period) {
+        private static double[] experiment(double lambda, int mu, int m, int R1, int R2, int n, int period) {
             double[] result = new double[2];
             if(lambda == 0) {
                 result[0] = 0;
@@ -136,10 +137,15 @@ namespace QueuingSystem {
             int ro_max = Convert.ToInt32(roTextBox.Text); // Максимальная нагрузка
             int mu = Convert.ToInt32(muTextBox.Text); // Интенсивность потока обслуживания
             int n = Convert.ToInt32(nTextBox.Text); // Кол-во заявок
-            int period = n / Convert.ToInt32(periodTextBox.Text); // Периодичность
+            int L = Convert.ToInt32(LTextBox.Text);
+            if (L > n) L = n;
+            int period = n/L; // Периодичность
             double step = Convert.ToDouble(stepTextBox.Text); // Шаг по lambda (ro)
-
+            int R1 = Convert.ToInt32(R1TextBox.Text);
+            int R2 = Convert.ToInt32(R2TextBox.Text);
+            
             int lambda = ro_max; // Входящий поток заявок на обслуживание
+
             double[] n_array = new double[2];
 
             for(double ro = 0; ro <= ro_max; ro += step) {
@@ -148,20 +154,29 @@ namespace QueuingSystem {
                 chart1.Series[0].Points.AddXY(ro, theory(ro, m));
 
                 // Эксперимент
-
-                if (radioButton1.Checked) {
-                    n_array = poissonExperiment(ro, mu, m, 1, 1, n, period);
-                } else if(radioButton2.Checked) {
-                    int R1 = Convert.ToInt32(R1TextBox.Text);
-                    n_array = poissonExperiment(ro, mu, m, R1, 1, n, period);
-                } else if(radioButton3.Checked) {
-                    int R2 = Convert.ToInt32(R2TextBox.Text);
-                    n_array = poissonExperiment(ro, mu, m, 1, R2, n, period);
-                } else if(radioButton4.Checked) {
-                    int R1 = Convert.ToInt32(R1TextBox.Text);
-                    int R2 = Convert.ToInt32(R2TextBox.Text);
-                    n_array = poissonExperiment(ro, mu, m, R1, R2, n, period);
-                }
+                switch (RadioButton)
+                {
+                    case 1:
+                        {
+                            n_array = experiment(ro, mu, m, 1, 1, n, period);
+                            break;
+                        }
+                    case 2:
+                        {
+                            n_array = experiment(ro, mu, m, R1, 1, n, period);
+                            break;
+                        }
+                    case 3:
+                        {
+                            n_array = experiment(ro, mu, m, 1, R2, n, period);
+                            break;
+                        }
+                    case 4:
+                        {
+                            n_array = experiment(ro, mu, m, R1, R2, n, period);
+                            break;
+                        }
+                }                
                 chart1.Series[1].Points.AddXY(ro, n_array[0]); // Линия эксперимента
                 chart1.Series[2].Points.AddXY(ro, n_array[1]); // Линия СКО
             }
@@ -182,22 +197,22 @@ namespace QueuingSystem {
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            radioChanged();
+            radioChanged(1);
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            radioChanged();
+            radioChanged(2);
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            radioChanged();
+            radioChanged(3);
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            radioChanged();
+            radioChanged(4);
         }
     }
 }
